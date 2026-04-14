@@ -1,0 +1,172 @@
+/* assets/style.css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+input,
+textarea,
+select,
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #0071e3;
+    outline: none;
+}
+
+button {
+    background-color: #0071e3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    background: #f9f9fb;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+small {
+    color: #888;
+    font-size: 13px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+a {
+    color: #0071e3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .ticket-layout {
+        flex-direction: column;
+    }
+
+    .ticket-history {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 30px;
+    }
+}
+
+textarea {
+    background: #fff;
+    color: #000;
+    font-family: Arial, sans-serif;
+    border: none;
+}
+
+.ticket-history {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ticket-update {
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.ticket-update.user {
+    background-color: #f4f4f4;
+    color: #000;
+    align-self: flex-start;
+    border-left: 4px solid #aaa;
+}
+
+.ticket-update.admin {
+    background-color: #dcf8c6;
+    color: #000;
+    align-self: flex-end;
+    border-left: 4px solid #075e54;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .ticket-update {
+        max-width: 90%;
+    }
+
+    .ticket-update.admin {
+        background-color: #a3d9a5;
+    }
+
+    .ticket-update.user {
+        background-color: #eee;
+    }
+}
